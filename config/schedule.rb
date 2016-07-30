@@ -19,8 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :output, 'log/crontab.log'
+set :output, "#{Dir.pwd}/log/crontab.log"
 
 every 30.minutes do
-  command './batch.sh'
+  command "cd #{Dir.pwd} && #{Dir.pwd}/batch.sh"
 end

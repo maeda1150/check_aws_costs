@@ -84,6 +84,7 @@ $ bundle exec ruby disp_cost.rb
 ### set crontab
 
 ```
+$ mkdir log
 $ bundle exec whenever --update-crontab
 ```
 

@@ -35,6 +35,7 @@ end
 
 # start CloudWatch
 start_time = Time.now
+puts 'Start post cost to slack'
 
 aws_configs.each do |config|
   latests = Cost.latest_two(config['profile'])
@@ -47,4 +48,4 @@ aws_configs.each do |config|
   end
 end
 
-puts "CloudWatch cost time : #{Time.now - start_time} second"
+puts "post to slack cost time : #{Time.now - start_time} second"

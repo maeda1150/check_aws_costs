@@ -80,3 +80,15 @@ $ bundle exec ruby post_cost.rb
 ```
 $ bundle exec ruby disp_cost.rb
 ```
+
+### set crontab
+
+```
+$ bundle exec whenever --update-crontab
+```
+
+confirm
+
+```
+$ bundle exec whenever
+```

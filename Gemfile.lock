@@ -19,6 +19,7 @@ GEM
       jmespath (~> 1.0)
     aws-sdk-resources (2.3.9)
       aws-sdk-core (= 2.3.9)
+    chronic (0.10.2)
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
     eventmachine (1.2.0.1)
@@ -55,6 +56,8 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    whenever (0.9.7)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -67,6 +70,7 @@ DEPENDENCIES
   rake
   slack-api
   sqlite3
+  whenever
 
 BUNDLED WITH
    1.12.5

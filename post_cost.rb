@@ -38,7 +38,7 @@ start_time = Time.now
 
 aws_configs.each do |config|
   latests = Cost.latest_two(config['profile'])
-  if latests.first.value != latests.second.value
+  if (latests.first.value != latests.second.value) && (latest.first.created_at > Time.current - 5.minutes)
     post_slack(
       latests.first.profile,
       latests.first.time,

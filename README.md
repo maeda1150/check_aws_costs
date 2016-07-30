@@ -1,10 +1,5 @@
 # Check aws cost
 
-## environment
-
-Mac OS X EL Capitan
-ver 10.11.4
-
 ### need
 
 | program | version |
@@ -40,6 +35,7 @@ $ touch aws_config.yml
 ```
 
 write to aws_config.yml
+prefer only **CloudWatchReadOnlyAccess** IAM user
 ```
 -
   profile: name_1

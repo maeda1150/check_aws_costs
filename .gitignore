@@ -4,3 +4,4 @@
 /vendor/*
 /aws_config/*
 /database/*
+/log/*

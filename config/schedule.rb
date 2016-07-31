@@ -24,3 +24,7 @@ set :output, "#{Dir.pwd}/log/crontab.log"
 every 30.minutes do
   command "cd #{Dir.pwd} && #{Dir.pwd}/batch.sh"
 end
+
+every 1.day, at: '0:00 am' do
+  command "cd #{Dir.pwd} && #{Dir.pwd}/batch_daily.sh"
+end

@@ -21,7 +21,7 @@ slack_config = Util.load_yaml('slack_config.yml', 'aws_config')
 
 # start CloudWatch
 start_time = Time.now
-puts 'Start post cost to slack'
+puts 'Start post daily cost to slack'
 
 slack = Slack::Incoming::Webhooks.new slack_config['webhook_url']
 aws_configs.each do |config|

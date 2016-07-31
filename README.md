@@ -57,6 +57,12 @@ write to slack_config.yml
 webhook_url: https://hooks.slack.com/services/xxxxxxxxxxxxxxxxx/zzzzzzzzzzzzzzz
 ```
 
+if you want to warning to slack when aws cost up is bigger than your specific cost
+```
+# when different cost is 5 dollars
+warning_cost_diff: 5
+```
+
 ## execute command
 
 ### sync cost to database

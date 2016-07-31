@@ -54,7 +54,7 @@ $ touch slack_config.yml
 
 write to slack_config.yml
 ```
-token: xxxx-11111111111-1111111111111111-xxxxxxxxxxxx
+webhook_url: https://hooks.slack.com/services/xxxxxxxxxxxxxxxxx/zzzzzzzzzzzzzzz
 ```
 
 ## execute command

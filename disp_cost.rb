@@ -5,7 +5,6 @@ require 'yaml'
 require 'erb'
 require 'pry'
 require 'active_record'
-require 'slack'
 require 'active_support'
 
 Dir.glob("#{File.expand_path('../classes', __FILE__)}/*.rb").each do |file|

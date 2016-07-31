@@ -24,7 +24,6 @@ aws_configs = Util.load_yaml('aws_config.yml', 'aws_config')
 # start CloudWatch
 start_time = Time.current
 puts 'Start sync_cost task.'
-puts Time.current.to_s
 
 current_time = Time.current
 

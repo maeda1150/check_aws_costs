@@ -19,12 +19,17 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :output, "#{Dir.pwd}/log/crontab.log"
+set :output, "#{Dir.pwd}/log/#{(Time.current + 1.day).to_date.to_s}.log"
 
 every 30.minutes do
   command "cd #{Dir.pwd} && #{Dir.pwd}/batch.sh"
 end
 
-every 1.day, at: '0:05 am' do
+every 1.day, at: '11:50 pm' do
   command "cd #{Dir.pwd} && #{Dir.pwd}/batch_daily.sh"
+end
+
+# for set up daily log file
+every 1.day, at: '11:55 am' do
+  command "cd #{Dir.pwd} && bundle exec whenever --update-crontab"
 end

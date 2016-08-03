@@ -18,6 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+require "active_support/all"
 
 set :output, "#{Dir.pwd}/log/#{(Time.current + 1.day).to_date.to_s}.log"
 

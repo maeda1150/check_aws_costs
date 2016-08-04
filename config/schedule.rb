@@ -31,6 +31,6 @@ every 1.day, at: '11:50 pm' do
 end
 
 # for set up daily log file
-every 1.day, at: '11:55 am' do
+every 1.day, at: '11:55 pm' do
   command "cd #{Dir.pwd} && bundle exec whenever --update-crontab"
 end

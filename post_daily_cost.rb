@@ -24,11 +24,15 @@ start_time = Time.now
 puts 'Start post daily cost to slack'
 
 slack = Slack::Incoming::Webhooks.new slack_config['webhook_url']
+post_str = ''
+
 aws_configs.each do |config|
   latest = Cost.where(profile: config['profile']).order(time: :desc).first
-  slack.post "profile: #{ latest.profile }  "\
-             "cost: #{ latest.value.to_s }  "\
-             "time: #{ latest.time.to_s }"
+  post_str << "profile: #{ latest.profile }  "\
+              "cost: #{ latest.value.to_s }  "\
+              "time: #{ latest.time.to_s }\n"
 end
+
+slack.post post_str
 
 puts "post to slack cost time : #{Time.now - start_time} second"
